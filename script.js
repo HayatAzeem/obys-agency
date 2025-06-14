@@ -32,13 +32,31 @@ tl.to("#loader",{
 
 tl.from("#page1",{
     delay:0.2,
-    y:1200,
-    opacity:0,
-    durarion:0.5,
+    y:1600,
+    duration:0.6,
     ease:Power4
 })
 tl.to("#loader",{
     display:"none"
 })
+tl.from("#nav",{
+    opacity:0
+})
+tl.from("#hero1 h1,#hero2 h1,#hero3,#hero4 h1",{
+    y:120,
+    stagger:0.2
+})
 }
 loadingAnimations()
+
+function cursorAnimation(){
+    document.addEventListener("mousemove", function(dets){
+    gsap.to("#crsr",{
+        left:dets.x,
+        top:dets.y
+    })
+})
+
+Shery.makeMagnet("#nav-part2 h4");
+}
+cursorAnimation()
