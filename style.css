@@ -20,7 +20,6 @@ html, body {
 }
 
 .line{
-    /* background-color: red; */
     height: fit-content;
     overflow: hidden;
     display: flex;
@@ -89,6 +88,12 @@ html, body {
     }
 }
 
+#last h6{
+    font-weight: 200;
+    font-size: 1vw;
+    margin-left: 100px;
+}
+
 #main{
     position: relative;
     background-color: #030303;
@@ -98,4 +103,11 @@ html, body {
     height: 100vh;
     width: 100%;
     background-color: #151515;
+}
+
+#page1 #nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 4vw;
 }
