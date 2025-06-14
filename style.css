@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Plain Light";
+    color: #fff;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#loader{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: #030303;
+    padding: 25vh 10vw;
+}
+
+.line{
+    /* background-color: red; */
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3vw;
+}
+
+#line1-part1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+
+#line1-part1 h5, #line1-part1 h6{
+    font-size: 3vw;
+    font-family: "Silk Serif TRIAL Light";
+    font-weight: 100;
+}
+
+#line1-part1 h5{
+    width: 5vw;
+    text-align: right;
+}
+
+.line h1{
+    font-size: 6.5vw;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.line h2{margin-top: 10px;
+    font-size: 6.5vw;
+    font-weight: 20;
+    text-transform: uppercase;
+    opacity: 0;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes anime {
+    0%{
+        font-family:"Plain-Light";
+        -webkit-text-stroke: 1px #fff;
+        color: #fff;
+        opacity: 1;
+    }
+    50%{
+        font-family:"Plain-Light";
+        -webkit-text-stroke: 1px #fff;
+        color: #fff;
+        opacity: 0;
+    }
+    51%{
+        font-family: "Silk Serif TRIAL Light";
+        -webkit-text-stroke: 1px #fff;
+        color: #030303;
+        opacity: 1;
+    }
+    100%{
+        font-family: "Silk Serif TRIAL Light";
+        -webkit-text-stroke: 1px #fff;
+        color: #030303;
+        opacity: 0;
+    }
+}
+
+#main{
+    position: relative;
+    background-color: #030303;
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: #151515;
+}
