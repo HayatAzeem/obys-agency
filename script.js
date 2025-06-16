@@ -42,7 +42,7 @@ tl.to("#loader",{
 tl.from("#nav",{
     opacity:0
 })
-tl.from("#hero1 h1,#hero2 h1,#hero3,#hero4 h1",{
+tl.from("#hero1 h1,#hero2 h1,#hero3 h2,#hero3 h3,#hero4 h1",{
     y:120,
     stagger:0.2
 })
