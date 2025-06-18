@@ -142,7 +142,7 @@ body{
 
 .hero{
     width: 72%;
-    margin-left: 28%;
+    padding-left: 28%;
     height: fit-content;
     overflow: hidden;
     display: flex;
@@ -153,7 +153,7 @@ body{
 }
 
 .hero:nth-child(2){
-    margin-top: 16vh;
+    margin-top: 18vh;
 }
 
 .hero h1{
@@ -162,6 +162,17 @@ body{
     text-transform: uppercase;
     line-height: 7vw;
     padding-bottom: 5px;
+    position: relative;
+}
+
+#hero1::before{
+    content: "01";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    top: -1%;
+    left: 20%;
+    font-family: "Silk Serif TRIAL Light";
 }
 
 .hero h2, .hero h3{
@@ -252,9 +263,19 @@ body{
 #page4-content h1{
     font-size: 7vw;
     text-transform: uppercase;
+    position: relative;
+}
+#page4-content h1::before{
+    content: "03";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    top: 20%;
+    left: -20%;
+    font-family: "Silk Serif TRIAL Light";
 }
 
-#page4-content .underline{
+.underline{
     height: 2px;
     width: 100%;
     border-color: #fff;
@@ -314,4 +335,118 @@ body{
 #page5{
     min-height: 100vh;
     width: 100%;
+}
+
+.elem{
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: -1vh;
+}
+.elem2{
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: -1vh;
+}
+
+.elem h1{
+    font-size: 8vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    margin-right: 16px;
+    animation-name: anime1;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.elem2 h1{
+    font-size: 8vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    margin-right: 16px;
+    animation-name: anime1;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+@keyframes anime1 {
+    from{
+        transform: translate(x);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+.elem span{
+    font-style: italic;
+    font-family: "Silk Serif TRIAL Light";
+    color: transparent;
+}
+.elem2 span{
+    font-style: italic;
+    font-family: "Silk Serif TRIAL Light";
+    color: transparent;
+}
+
+#footer{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding-left: 28vw;
+}
+
+#footer h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+}
+
+#footer h1::before{
+    content: "04";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    top: 20%;
+    left: -20%;
+    font-family: "Silk Serif TRIAL Light";
+}
+
+#footer-div{
+    padding-right: 15vw;
+    padding-top: 5vw;
+    margin-bottom: 3vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#footer-div h6{
+    font-size: 0.9vw;
+    margin-bottom: 1.5vw;
+    font-weight: 500;
+}
+
+.box{
+    width: 20%;
+}
+
+#footer-div h5{
+    font-size: 1.5vw;
+    font-weight: 500;
+    margin-bottom: -1vh;
+    /* margin: 0.2vh 0; */
+}
+
+#footer>h5{
+    font-weight: 500;
+    font-size: 1vw;
 }
