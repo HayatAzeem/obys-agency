@@ -14,15 +14,11 @@ body{
     overflow-x: hidden;
 }
 
-#crsr{
-    height: 2.5vw;
-    width: 2.5vw;
-    border-radius: 50%;
-    border: 2px solid #ffffffbe;
-    position: fixed;
-    z-index: 9999;
+.mousefollower{
+    border: 2px solid #fff;
+    background-color: rgb(255, 255, 255);
+    scale: 2;
     mix-blend-mode: difference;
-    transform: translate(-50%,-50%)
 }
 
 #loader{
@@ -141,7 +137,7 @@ body{
 }
 
 .hero{
-    width: 72%;
+    width: 100%;
     padding-left: 28%;
     height: fit-content;
     overflow: hidden;
@@ -180,11 +176,12 @@ body{
     font-weight: 600;
     text-transform: uppercase;
     line-height: 7vw;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
 }
 
 .hero h2{
     text-decoration-line: underline;
+    text-decoration-thickness: 10px;
 }
 
 .hero h2:hover{
@@ -224,12 +221,12 @@ body{
 
 #video-cursor{
     background-color: #ffa630;
-    height: 8vw;
-    width: 8vw;
+    height: 9vw;
+    width: 9vw;
     border-radius: 50%;
     position: absolute;
-    top: -10%;
-    left: 80%;
+    top: -15%;
+    left: 70%;
     z-index: 999;
     display: flex;
     align-items: center;
@@ -245,7 +242,128 @@ body{
     width: 100%;
     background-color: #151515;
     position: relative;
+    padding: 17vh 2vw;
+    margin-bottom: 60vh;
+    margin-top: 20vh;
 }
+
+#page3 h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 28vw;
+}
+#page3 h1::before{
+    content: "02";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    top: 20%;
+    left: -20%;
+    font-family: "Silk Serif TRIAL Light";
+}
+
+#image-div-container{
+    padding: 1vw;
+    position: relative;
+    /* background-color: red; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20vh;
+}
+
+.image-div{
+    height: 38vw;
+    width: 27vw;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    /* background-color: blue; */
+}
+
+.image-div:nth-child(1){
+    height: 30vw;
+    width: 22vw;
+}
+
+.image-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.page3-circle1{
+    height: 25vw;
+    width: 25vw;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 23vh;
+    margin-left: 10vw;
+    position: relative;
+}
+
+.page3-circle1 svg{
+    height: 40%;
+}
+.page3-circle2{
+    height: 25vw;
+    width: 25vw;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* margin-top: 23vh; */
+    /* margin-left: 10vw; */
+}
+
+.page3-circle2 svg{
+    height: 40%;
+    rotate: -45deg;
+}
+
+.circle-in{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scale: 0;
+    border-radius: 50%;
+    transition: all ease 0.5s;
+}
+
+.circle-in p{
+    font-size: 0.8vw;
+    color: #000;
+    width: 70%;
+    font-weight: 500;
+    scale: 0;
+    transition: all ease 0.5s;
+    transition-delay: 0.3s;
+    opacity: 0;
+}
+
+#cir:hover .circle-in{
+    scale: 1;
+}
+
+#cir:hover .circle-in p{
+    scale: 1;
+    opacity: 1;
+}
+
 #page4{
     min-height: 100vh;
     width: 100%;
@@ -449,4 +567,9 @@ body{
 #footer>h5{
     font-weight: 500;
     font-size: 1vw;
+}
+
+._canvas_container{
+    z-index: 999999 !important;
+    pointer-events: none;
 }
