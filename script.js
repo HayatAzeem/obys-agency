@@ -137,8 +137,38 @@ function sheryAnimation(){
         gooey: true,
     })
 }
+function flagAnimation(){
+    var herotext3 = document.querySelector("#hero3");
+ herotext3.addEventListener("mouseenter",function(){
+    herotext3.addEventListener("mousemove",function(dets){
+        gsap.to(".mousefollower",{
+            opacity:0
+        })
+        gsap.to("#flag",{
+            x:dets.x,
+            y:dets.y,
+            opacity:1,
+        })
+    })
+ })
+ herotext3.addEventListener("mouseleave",function(){
+        gsap.to(".mousefollower",{
+            opacity:1
+        })
+        gsap.to("#flag",{
+            opacity:0
+        })
+})
+}
+
+// var tanimate = document.querySelectorAll("#textanimate");
+// tanimate.addEventListener("mouseenter",function(){
+//     $('#textanimate').textillate({ in: { effect: 'rollIn' } });
+// })
+
 // Initializing the animations
 loadingAnimations()
 cursorAnimation()
 locomotive()
 sheryAnimation()
+flagAnimation()

@@ -144,7 +144,7 @@ body{
     display: flex;
     align-items: center;
     position: relative;
-    z-index: 9999;
+    z-index: 99999;
     top: -8vh;
 }
 
@@ -372,7 +372,7 @@ body{
     width: 100%;
     /* background-color: black; */
     position: relative;
-    padding: 7vh 0;
+    padding: 50vh 0;
 }
 
 #page4-content{
@@ -523,6 +523,7 @@ body{
     width: 100%;
     position: relative;
     padding-left: 28vw;
+    padding-top: 10vw;
 }
 
 #footer h1{
@@ -575,4 +576,13 @@ body{
 ._canvas_container{
     z-index: 999999 !important;
     pointer-events: none;
+}
+
+#flag{
+    height: 25vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translate(-50%, -50%);
 }
