@@ -108,16 +108,24 @@ function cursorAnimation(){
         if(video.paused){
             video.play();
             video.style.opacity = 1;
+            document.querySelector("#video-cursor").innerHTML = `<i class="ri-pause-large-fill"></i>`;
             gsap.to("#video-cursor i",{
                 rotation:360,
                 duration:1
             })
+            gsap.to("#video-cursor",{
+                scale:0.5
+            })
         }else{
             video.pause();
             video.style.opacity = 0;
+             document.querySelector("#video-cursor").innerHTML = `<i class="ri-play-large-fill"></i>`;
             gsap.to("#video-cursor i",{
-                rotation:0,
+                rotation:360,
                 duration:1
+            })
+            gsap.to("#video-cursor",{
+                scale:1
             })
         }
     })
