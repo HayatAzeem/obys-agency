@@ -1,10 +1,33 @@
+@font-face {
+    font-family: "Plain Light";
+    src: url(./fonts/plain-regular-webfont.ttf);
+}
+
+@font-face {
+    font-family: "Plain Light";
+    src: url(./fonts/plain-light-webfont.ttf);
+}
+
+@font-face {
+    font-family: "silk serif";
+    src: url(./fonts/silkserif-regularitalic-webfont.ttf);
+}
+
+@font-face {
+    font-family: "silk serif";
+    src: url(./fonts/silkserif-lightitalic-webfont.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     box-sizing: border-box;
     font-family: "Plain Light";
     color: #fff;
 }
+
 html, body {
     height: 100%;
     width: 100%;
